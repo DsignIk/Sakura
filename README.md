@@ -4,8 +4,11 @@ and this file will be downloaded
 # args
 you can use args:
     --blue     setting interface to blue
+    
     --green    setting interface to green
+    
     --red      setting interface to red
+    
     --help     prints help
 # requirements 
      - request

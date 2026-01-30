@@ -1,0 +1,30 @@
+docs 
+you need to write here a
+   url then it will download it
+   if file downloaded search
+   it ONLY in CURRENT directory
+   also you can customize it
+   
+                          sys args
+            - --blue  | setting interface as blue
+            - --green | setting interface as green
+            - --red   | setting interface as red
+            - --help  | giving you help
+            (maybe new commands soon)
+   
+   
+   file get downloaded by request library
+   you need to install it 
+   also:
+   	      - basic python libs
+   	      - tkinter (if i update it (idk)
+   if you need to get a FILE
+   give a FILE url
+   
+                  if you need to use it as a lib
+                         IMPORT THIS FILE 
+                    then call the sakura(<url>)
+                    
+   if you need a core version
+   just call it in code
+                       "       end       "

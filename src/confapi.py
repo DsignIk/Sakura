@@ -11,11 +11,14 @@
 # ===≈=======
 
 """ root is a commands to set something """
+import json
+import os
 
-# ===========
-# !   set.  !
-# ===========
-""" set is the thing that sets the colors """
+base_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(base_dir, "conf", "data.json")
+
+with open(file_path, "r") as f:
+    pamparam = json.load(f)
 
 class root:
 	def cset(c):
@@ -29,12 +32,21 @@ class root:
 class set:
 	""" the blue one """
 	def blue():
-		root.cset(61)
+		try:
+		    root.cset(pamparam['blue'])
+		except:
+		    root.cset(61)
 		
 	""" the green one """
 	def green():
-		root.cset(114)
+		try:
+		    root.cset(pamparam['green'])
+		except:
+		    root.cset(114)
 		
 	""" the red one """
 	def red():
-		root.cset(204)
+		try:
+		    root.cset(pamparam['red'])
+		except:
+		    root.cset(204)

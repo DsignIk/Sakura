@@ -3,6 +3,15 @@ root = tk.Tk()
 root.withdraw() 
 
 import requests 
+""" 
+   if you need only a lib
+   you can go here
+   also:
+       - its have messages
+       - error
+       - success
+ 
+"""
 
 print ("[*] sakura")
 

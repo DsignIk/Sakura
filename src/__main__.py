@@ -14,6 +14,8 @@ import json
    if file downloaded search
    it ONLY in CURRENT directory
    also you can customize it
+   Legal & Ethical Use
+   This tool is a utility for automated file downloading. It is designed to simplify data collection, not to disrupt web services.
    The author is not responsible for any misuse or intentional server overload caused by this software
    
                           sys args

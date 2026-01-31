@@ -47,8 +47,14 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(base_dir, "conf", "data.json")
 print("only for legal use")
 
+        
 with open(file_path, "r") as f:
     pamparam = json.load(f)
+for item in sys.argv:
+    if item == "--emubrowser":
+        print ("the browser emulator don't fully emulated it! this setting use User-Agent-downloader not a basic User-Agent!")
+        pamparam['browser'] == True
+
 if pamparam['browser'] == True:
     headers = {
         'User-Agent-downloader': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
@@ -97,10 +103,11 @@ def sakura_core(url):
             with open(filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
+            time.sleep(0.3)
     except:
         # everything wrong
         sys.exit(1)  
-	time.sleep(0.5)
+    	
 	
 """ the main TUI if I
     can call this TUI
@@ -117,4 +124,4 @@ if __name__ == "__main__":
 print ("\033[0m")
 
 
-    
+        

@@ -1,3 +1,4 @@
+import time
 def sakura_core(url):
     
     
@@ -17,6 +18,10 @@ def sakura_core(url):
             with open(filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
+            time.sleep(0.5)
+    
+    
     except:
         # everything wrong
         sys.exit(1)  
+

@@ -7,6 +7,8 @@ import os
 
 f = os.path.expanduser("~/.bashrc")
 n = "alias wall='python3 /usr/bin/sakura/src\n"
-
-with open(full_path, 'a', encoding='utf-8') as f:
-    f.write(f"\n{n}")
+try:
+    with open(full_path, 'a', encoding='utf-8') as f:
+        f.write(f"\n{n}")
+except:
+    os.system('python src/scen/error.py')

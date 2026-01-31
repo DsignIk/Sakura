@@ -14,6 +14,7 @@ import json
    if file downloaded search
    it ONLY in CURRENT directory
    also you can customize it
+   The author is not responsible for any misuse or intentional server overload caused by this software
    
                           sys args
             - --blue  | setting interface as blue

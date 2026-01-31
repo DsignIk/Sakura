@@ -12,6 +12,10 @@
 
 """ root is a commands to set something """
 
+# ===========
+# !   set.  !
+# ===========
+""" set is the thing that sets the colors """
 
 class root:
 	def cset(c):

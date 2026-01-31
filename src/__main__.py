@@ -38,14 +38,18 @@ import arg
                        "       end       "
 """
 
-
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+    'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Referer': 'https://www.google.com'
+}
 def sakura(url):
     try:
         filename = url.split('/')[-1]
         
         # message that we downloading it here
         print(f"[*] downloading {url}...")
-        with requests.get(url, stream=True) as r:
+        with requests.get(url, stream=True, headers=headers) as r:
             r.raise_for_status()
             # open the file and writing
             with open(filename, 'wb') as f:

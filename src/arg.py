@@ -28,6 +28,8 @@ import platform
 if platform.system() == "Windows":
     import os
     os.system('')
+if platform.system() == "Android":
+	print ("USING ANDROID MAYBE SOME BUGS!")
 for item in sys.argv:
 	if item == "--blue":
 		confapi.set.blue()

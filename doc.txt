@@ -4,6 +4,11 @@ you need to write here a
    if file downloaded search
    it ONLY in CURRENT directory
    also you can customize it
+   WARNING! THIS PROJECT HAS COMMANDS TO DELETE FILES!
+
+        Legal & Ethical Use only This tool is a utility for automated file downloading. It is designed to simplify data collection, not to disrupt web services.
+    
+    The author is not responsible for any misuse or intentional server overload caused by this software. this disclaimer and legal use only policy apply to all current and previous versions/commits of this utility
    
                           sys args
             - --blue  | setting interface as blue

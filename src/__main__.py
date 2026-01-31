@@ -99,6 +99,7 @@ def sakura_core(url):
     except:
         # everything wrong
         sys.exit(1)  
+	time.sleep(0.5)
 	
 """ the main TUI if I
     can call this TUI

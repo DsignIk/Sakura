@@ -22,8 +22,11 @@ def sakura_core(url):
             with open(filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
+                    
+            """ showing the message """
+            
             import message
     except:
         # everything wrong
+        import error
         sys.exit(1)  
-sakura_core("")

@@ -45,14 +45,14 @@ import json
 """
 base_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(base_dir, "conf", "data.json")
-print("only for legal use")
+print("[!] only for legal use")
 
         
 with open(file_path, "r") as f:
     pamparam = json.load(f)
 for item in sys.argv:
     if item == "--emubrowser":
-        print ("the browser emulator don't fully emulated it! this setting use User-Agent-downloader not a basic User-Agent!")
+        print ("[!] the browser emulator don't fully emulated it! this setting use User-Agent-downloader not a basic User-Agent!")
         pamparam['browser'] == True
 
 if pamparam['browser'] == True:

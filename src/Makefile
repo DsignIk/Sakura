@@ -1,6 +1,5 @@
 .PHONY: help
 
-# just load the help command
-
+# help command
 help:
-        python scen/help.py
+	python scen/help.py

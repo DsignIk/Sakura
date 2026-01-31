@@ -51,6 +51,8 @@ def sakura(url):
             with open(filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
+                    sys.stdout.write("■")
+        print("")
         # if everything ok this message will pop
         print(f"[+] file downloaded!!")
     except:
@@ -93,5 +95,6 @@ if __name__ == "__main__":
     	    url = input ('>>>')
     	    sakura(url)
 print ("\033[0m")
+
 
     

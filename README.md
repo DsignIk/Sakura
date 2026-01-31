@@ -6,6 +6,7 @@ you can write a url of a file
 and this file will be downloaded
 # args
 you can use args:
+
     --blue     setting interface to blue
     
     --green    setting interface to green

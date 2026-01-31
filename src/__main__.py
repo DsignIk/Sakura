@@ -44,6 +44,7 @@ import json
 """
 base_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(base_dir, "conf", "data.json")
+print("only for legal use")
 
 with open(file_path, "r") as f:
     pamparam = json.load(f)

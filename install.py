@@ -5,6 +5,9 @@
 import os
 import platform
 
+dir = os.getcwd()
+os.system(f'mv {dir} /usr/bin/sakura')
+
 """maybe the code is unreadable """
 # if os is the Linux using bashrc
 if platform.system() == 'Linux':

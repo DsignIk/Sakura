@@ -3,6 +3,7 @@ root = tk.Tk()
 root.withdraw() 
 
 import requests 
+import time
 """ 
    if you need only a lib
    you can go here
@@ -37,7 +38,9 @@ def sakura_core(url):
             """ showing the message """
             
             import message
+        time.sleep(0.5)
     except:
         # everything wrong
         import error
+        time.sleep(0.5)
         sys.exit(1)  

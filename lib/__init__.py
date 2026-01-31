@@ -4,6 +4,8 @@ root.withdraw()
 
 import requests 
 
+print ("[*] sakura")
+
 def sakura_core(url):
     
     

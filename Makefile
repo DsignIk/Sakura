@@ -1,3 +1,5 @@
+.PHONY: bstart clean
+
 bstart:
     python sakura/src
 clean:

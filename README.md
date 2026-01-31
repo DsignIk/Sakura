@@ -1,6 +1,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 WARNING! THIS PROJECT HAS COMMANDS TO DELETE FILES! 
+
 Legal & Ethical Use only
 This tool is a utility for automated file downloading. It is designed to simplify data collection, not to disrupt web services.
 

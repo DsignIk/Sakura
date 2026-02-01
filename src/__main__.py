@@ -60,6 +60,7 @@ for item in sys.argv:
     if item == "--emubrowser":
         print ("[!] the browser emulator don't fully emulated it! this setting use User-Agent-downloader not a basic User-Agent!")
         pamparam['browser'] == True
+    
 
 if pamparam['browser'] == True:
     headers = {
@@ -69,11 +70,11 @@ if pamparam['browser'] == True:
     }
 else:
     headers = {}
-    
+
 def sakura(url):
     try:
         filename = url.split('/')[-1]
-        
+        print (filename)
         # message that we downloading it here
         print(f"[*] downloading {url}...")
         with requests.get(url, stream=True, headers=headers) as r:
@@ -83,12 +84,20 @@ def sakura(url):
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
                     sys.stdout.write("■")
+        try:
+            if pamparam['extract'] and filename.endswith('zip') == True:
+                shutil.unpack_archive(filename, pamparam['target'])
+        except:
+            pass
         print("")
         # if everything ok this message will pop
         print(f"[+] file downloaded!!")
+        time.sleep(0.5)
     except:
+        raise
         # everything wrong
         print(f"[-] something wrong bro")
+        time.sleep(0.5)
 
 def sakura_core(url):
     

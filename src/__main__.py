@@ -5,6 +5,8 @@ import time
 import os
 import json
 import getarch
+import shutil
+import logger
 
 
 
@@ -80,10 +82,14 @@ def sakura(url):
         with requests.get(url, stream=True, headers=headers) as r:
             r.raise_for_status()
             # open the file and writing
+            a = 0
+            
             with open(filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=8192):
+                    a = a + 1
                     f.write(chunk)
                     sys.stdout.write("■")
+                    logger.load(a)
         try:
             if pamparam['extract'] and filename.endswith('zip') == True:
                 shutil.unpack_archive(filename, pamparam['target'])
@@ -93,8 +99,9 @@ def sakura(url):
         # if everything ok this message will pop
         print(f"[+] file downloaded!!")
         time.sleep(0.5)
+        logger.succes()
     except:
-        raise
+        logger.down()
         # everything wrong
         print(f"[-] something wrong bro")
         time.sleep(0.5)

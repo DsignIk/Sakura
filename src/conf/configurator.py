@@ -61,9 +61,9 @@ a = input('[y/n] ')
 
 if a == "y":
     print ("[!] YOU NEED ANSI 256 COLORS")
-    red = input("[red] ")
-    green = input("[green] ")
-    blue = input("[blue] ")
+    red = int(input("[red] "))
+    green = int(input("[green] "))
+    blue = int(input("[blue] "))
     data["blue"] = blue
     data["green"] = green
     data["red"] = red

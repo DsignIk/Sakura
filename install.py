@@ -13,7 +13,7 @@ os.system(f'mv "{dir}" /usr/bin/sakura')
 if platform.system() == 'Linux':
     f = os.path.expanduser("~/.bashrc")
     
-    n = "alias sakura='python3 /usr/bin/sakura/src'" 
+    n = "alias sakura='cd /usr/bin;python3 /usr/bin/sakura/src'" 
     try:
         with open(f, 'a', encoding='utf-8') as l:
             l.write(f"\n{n}\n")
@@ -24,7 +24,7 @@ if platform.system() == 'Linux':
 if platform.system() == 'FreeBSD':
     f = os.path.expanduser("~/.cshrc")
     
-    n = "alias sakura 'python3 /usr/bin/sakura/src/main.py'"
+    n = "alias sakura 'cd usr/bin;python3 /usr/bin/sakura/src/main.py'"
     
     try:
         with open(f, 'a', encoding='utf-8') as bsd:

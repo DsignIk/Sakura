@@ -14,7 +14,7 @@ and this file will be downloaded
 # args
 you can use args:
 
-    --blue     setting interface to blue
+    | --blue     setting interface to blue |
     
     --green    setting interface to green
     
@@ -24,4 +24,8 @@ you can use args:
 # requirements 
      - request
 # install
+
+     # you need to be in sakura dir
+     cd sakura
      python install.py
+     

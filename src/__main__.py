@@ -4,7 +4,7 @@ import arg
 import time
 import os
 import json
-
+import getarch
 
 
 
@@ -43,6 +43,12 @@ import json
    just call it in code
                        "       end       "
 """
+
+if getarch.was == "x86_64" or getarch.was == "AMD64":
+    pass
+else:
+    print ("[!] maybe some commands will not work because your CPU architecture ")
+    
 base_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(base_dir, "conf", "data.json")
 print("[!] only for legal use")
@@ -124,4 +130,4 @@ if __name__ == "__main__":
 print ("\033[0m")
 
 
-        
+                

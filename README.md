@@ -14,13 +14,13 @@ and this file will be downloaded
 # args
 you can use args:
 
-    | --blue     setting interface to blue |
-    
-    --green    setting interface to green
-    
-    --red      setting interface to red
-    
-    --help     prints help
+| command     |   doing           |
+| ----------- | -------------     |
+| --blue      | blue color        |
+| --red       | red color         |
+| --green     | green color       |
+| --emubrowser| emulating browser |
+
 # requirements 
      - request
 # install

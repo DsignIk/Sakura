@@ -138,6 +138,7 @@ def sakura_core(url):
 """
 try:
     sakura(urlik)
+    sys.exit(0)
 except:
     pass
 if __name__ == "__main__":

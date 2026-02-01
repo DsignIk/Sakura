@@ -1,4 +1,11 @@
+# I added time.sleep
+# to be sure this
+# no one using it for overload servers
+
+
 import time
+import requests 
+
 def sakura_core(url):
     
     
@@ -24,4 +31,5 @@ def sakura_core(url):
     except:
         # everything wrong
         sys.exit(1)  
+
 

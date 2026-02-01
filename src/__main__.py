@@ -62,6 +62,8 @@ for item in sys.argv:
     if item == "--emubrowser":
         print ("[!] the browser emulator don't fully emulated it! this setting use User-Agent-downloader not a basic User-Agent!")
         pamparam['browser'] == True
+    if item.startswith('http') or item.startswith('https'):
+        urlik = item
     
 
 if pamparam['browser'] == True:
@@ -134,7 +136,10 @@ def sakura_core(url):
 """ the main TUI if I
     can call this TUI
 """
-
+try:
+    sakura(urlik)
+except:
+    pass
 if __name__ == "__main__":
     	    """ prints interface """
     	    print ("===================================")

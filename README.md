@@ -1,5 +1,10 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
+maybe the installer is not working!
+if you get an error pls make an issue
+
+           ye me eng is bad
+           
 WARNING! THIS PROJECT HAS COMMANDS TO DELETE FILES! 
 
 Legal & Ethical Use only

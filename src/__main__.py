@@ -7,6 +7,9 @@ import json
 import getarch
 import shutil
 import logger
+from pathlib import Path
+import random
+
 
 
 
@@ -75,10 +78,16 @@ if pamparam['browser'] == True:
 else:
     headers = {}
 
+
 def sakura(url):
     try:
         filename = url.split('/')[-1]
-        print (filename)
+        path = Path(filename)
+        num = random.randint(1, 100)
+        name, ext = os.path.splitext(filename)
+        
+        if path.exists():
+            filename = f"{name}.{num}{ext}"
         # message that we downloading it here
         print(f"[*] downloading {url}...")
         with requests.get(url, stream=True, headers=headers) as r:

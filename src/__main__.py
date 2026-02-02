@@ -31,6 +31,7 @@ from confg import fgossize
             - --green | setting interface as green
             - --red   | setting interface as red
             - --help  | giving you help
+            - --emubrowser
             (maybe new commands soon)
    
    
@@ -50,6 +51,7 @@ from confg import fgossize
    just call it in code
                        "       end       "
 """
+quiet = 0
 
 if getarch.was == "x86_64" or getarch.was == "AMD64":
     pass
@@ -69,6 +71,8 @@ for item in sys.argv:
         pamparam['browser'] == True
     if item.startswith('http') or item.startswith('https'):
         urlik = item
+    if item.startswith('-q'):
+        quiet = 1
     
 
 if pamparam['browser'] == True:
@@ -102,6 +106,7 @@ def sakura(url):
                     a = a + 1
                     f.write(chunk)
                     sys.stdout.write("■")
+                    sys.stdout.flush()
                     logger.load(a)
         try:
             if pamparam['extract'] and filename.endswith('zip') == True:
@@ -155,10 +160,15 @@ def sakura_core(url):
     can call this TUI
 """
 try:
-    sakura(urlik)
+    if quiet == 0:
+        sakura_core(urlik)
+    else:
+        sakura(urlic)
     sys.exit(0)
 except:
     pass
+    
+    
 if __name__ == "__main__":
     	    """ prints interface """
     	    need = round(fgossize.columns, -1)
@@ -170,7 +180,7 @@ if __name__ == "__main__":
     	    for item in range(fgossize.columns):
     	        sys.stdout.write('=')
     	    print ()
-    	    url = input ('>>>')
+    	    url = input ('>>> ')
     	    sakura(url)
 print ("\033[0m")
 

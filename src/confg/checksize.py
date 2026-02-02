@@ -1,6 +1,6 @@
 import os
 import sys
-import confg.fgossize
+import fgossize
 
 if confg.fgossize < 20:
         print ("your terminal is too small")

@@ -9,6 +9,8 @@ import shutil
 import logger
 from pathlib import Path
 import random
+import math
+from confg import fgossize
 
 
 
@@ -117,6 +119,13 @@ def sakura(url):
         print(f"[-] something wrong bro")
         time.sleep(0.5)
 
+def raw(url):
+    # if you sure you url is right
+    # you can use this
+    with open(filename, 'wb') as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+    
 def sakura_core(url):
     
     
@@ -152,10 +161,15 @@ except:
     pass
 if __name__ == "__main__":
     	    """ prints interface """
-    	    print ("===================================")
-    	    print ('       sakura downloader')
-    	    print ('  give me a url and i will load it')
-    	    print ("===================================")
+    	    need = round(fgossize.columns, -1)
+    	    for item in range(fgossize.columns):
+    	        sys.stdout.write('=')
+    	    print ()
+    	    print ('sakura downloader'.center(need))
+    	    print ('give me a url and i will load it'.center(need))
+    	    for item in range(fgossize.columns):
+    	        sys.stdout.write('=')
+    	    print ()
     	    url = input ('>>>')
     	    sakura(url)
 print ("\033[0m")

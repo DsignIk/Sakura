@@ -1,3 +1,4 @@
+
 import requests
 import sys
 import arg
@@ -11,6 +12,7 @@ from pathlib import Path
 import random
 import math
 from confg import fgossize
+# from confg import checksize
 
 
 
